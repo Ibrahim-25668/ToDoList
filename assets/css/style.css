@@ -1,0 +1,269 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #609CE1;
+    color: #E1ECF9;
+}
+
+.container h1 {
+    color: #002a7f;
+    font-weight: 900;
+    font-size: 60px;
+    text-shadow: 15px 17px 18px black;
+    text-decoration: underline;
+}
+
+.btn {
+    padding: 15px 30px;
+    border-radius: 45px;
+    font-size: 23px;
+    font-weight: 600;
+    color: #E1ECF9;
+    background-color: #014ea5;
+    cursor: pointer;
+}
+
+/* Days Section  */
+
+.days {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hidd{
+    transform: scale(0);
+    transition: 0.4s;
+}
+
+.show{
+    transform: scale(1);
+    transition: 0.4s;
+}
+
+.days button {
+    color: #E1ECF9;
+    padding: 10px 50px;
+    margin: 5px;
+    font-size: 25px;
+    border: 1px solid #091D34;
+    font-weight: 900;
+    font-style: italic;
+    box-shadow: 5px 15px 8px rgba(0, 0, 0, 0.612);
+}
+
+.days button:hover {
+    cursor: pointer;
+    transform: translateY(-10px);
+    transition: all 0.4s ease-out;
+}
+
+/* ================================ */
+
+.col-color {
+    background-color: #133863;
+}
+
+.col-color1 {
+    background-color: #236AB9;
+}
+
+/* Tasks Table Section  */
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.table-task {
+    width: 100%;
+}
+
+.th-task {
+    padding: 10px 75px;
+    border: 1px white solid;
+    font-size: 25px;
+    font-weight: 900;
+    font-style: italic;
+}
+
+#btnNew{
+    margin-top: 75px;
+}
+
+#btnNew:hover {
+    background-color: #E1ECF9;
+    color: #014ea5;
+    transition: all 0.6s ease-in-out;
+}
+
+#btnBack{
+    background-color: rgba(193, 3, 3, 0.807);
+    margin-left: auto;
+    margin-bottom: 25px;
+    margin-top: -50px;
+    margin: -50px 0px 25px auto;
+}
+
+#btnBack:hover{
+    background-color: #E1ECF9;
+    color: rgba(193, 3, 3, 0.807);
+    transition: 0.6s;
+}
+
+/* ================================ */
+
+
+/* Modal Add Tasks Section  */
+.modal{
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    background-color: rgba(0, 0, 0,60%);
+    transform: scale(0);
+    transition: 0.4s;
+}
+
+.modal-show{
+    transform: scale(1);
+}
+
+.formTask {
+    width: 500px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    border: 1px solid black;
+    background-color: #133863;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.722);
+}
+
+.input-task-container {
+    position: relative;
+    width: 350px;
+    margin: 25px auto;
+}
+
+.input-task-container:nth-child(1) {
+    margin-top: 75px;
+}
+
+.input-task {
+    width: 100%;
+    padding: 0px;
+    font-size: 23px;
+    border: none;
+    border-bottom: 2px solid #E1ECF9;
+    background-color: transparent;
+    outline: none;
+}
+
+.input-task-container label {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-size: 20px;
+    transition: 0.4s;
+}
+
+.input-task-container input:focus+label,
+.input-task-container input:valid+label {
+    top: -15px;
+    font-size: 18px;
+}
+
+.underline {
+    width: 100%;
+    height: 2px;
+    background-color: #E1ECF9;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: 0.4s;
+}
+
+.input-task-container input:focus~.underline,
+.input-task-container input:valid~.underline {
+    transform: scaleX(1);
+    background-color: #091D34;
+}
+
+.input-time-container {
+    width: 350px;
+    margin: 25px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-time {
+    width: 100%;
+    margin: 10px;
+    font-size: 23px;
+    border: none;
+    border-bottom: 1px solid #E1ECF9;
+    background-color: transparent;
+    color: #E1ECF9;
+    outline: none;
+}
+
+.input-time-container label {
+    font-size: 20px;
+}
+
+#taskCate {
+    width: 350px;
+    margin: 25px auto;
+    font-size: 22px;
+    border: none;
+    border-bottom: 1px solid #E1ECF9;
+    background-color: transparent;
+    outline: none;
+    color: #E1ECF9;
+}
+
+#taskCate option {
+    background-color: #091D34;
+    color: #E1ECF9;
+}
+
+#btnAdd{
+    margin: 25px auto;
+    background-color: #002a7f ;
+}
+
+#btnAdd:hover{
+    color: #002a7f;
+    background-color: #E1ECF9;
+    transition: 0.6s;
+}
+
+#btnExitForm{
+    background-color: red;
+    padding: 10px 20px;
+    font-size: 26px;
+    align-self: flex-end;
+    margin-top: -40px;
+    margin-right: -25px;
+}
+
+#btnExitForm:hover{
+    background-color: #E1ECF9;
+    color: red;
+    transition: 0.6s ease-in-out;
+}
+/* ================================ */

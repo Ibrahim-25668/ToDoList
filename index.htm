@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/img/icon.png">
+
+    <title>To Do List</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>To Do List</h1>
+
+        <!-- Days Section  -->
+
+        <div class="days" id="daysContainer">
+
+            <button class="col-color btnDays" onclick="days(1)">Sunday</button>
+            <button class="col-color1 btnDays" onclick="days(2)">Monday</button>
+            <button class="col-color btnDays" onclick="days(3)">Tuesday</button>
+            <button class="col-color1 btnDays" onclick="days(0)">Wednesday</button>
+            <button class="col-color btnDays" onclick="days(4)">Thursday</button>
+            <button class="col-color1 btnDays" onclick="days(5)">Friday</button>
+            <button class="col-color btnDays" onclick="days(6)">Saturday</button>
+
+        </div>
+
+        <!-- Tasks Table Section  -->
+
+        <div class="tasks hidd" id="tasksContainer">
+            <button class="btn" id="btnBack">Go Back</button>
+
+            <table class="table-task" id="tableTask">
+
+                <tr>
+                    <th class="th-task col-color">Label</th>
+                    <th class="th-task col-color1">Description</th>
+                    <th class="th-task col-color">Time Start</th>
+                    <th class="th-task col-color1">Time End</th>
+                    <th class="th-task col-color">Categorie</th>
+                    <th class="th-task col-color1">Status</th>
+                    <th class="th-task col-color">Actions</th>
+                </tr>
+
+            </table>
+
+            <button class="btn" id="btnNew">New Task</button>
+        </div>
+
+        <!-- Modal Add Task Section  -->
+
+        <modal class="modal">
+            <form action="" class="formTask">
+
+                <button type="button" class="btn" id="btnExitForm">X</button>
+
+                <div class="input-task-container">
+                    <input type="text" class="input-task" id="taskLable" required>
+                    <label for="taskLable">Enter Task Label:</label>
+                    <span class="underline"></span>
+                </div>
+
+                <div class="input-task-container">
+                    <input type="text" class="input-task" id="taskDesc" required>
+                    <label for="taskDesc">Enter Task Description:</label>
+                    <span class="underline"></span>
+                </div>
+
+                <div class="input-time-container">
+                    <label for="timeStart">Select Time Start:</label>
+                    <input type="time" name="" class="input-time" id="timeStart" required>
+
+                    <label for="timeEnd">Select Time Start:</label>
+                    <input type="time" name="" class="input-time" id="timeEnd" required>
+                </div>
+
+                <select name="categories" id="taskCate" required>
+                    <option value="" disabled selected>Select Categorie</option>
+                    <option value="work">Work</option>
+                    <option value="study">Study</option>
+                    <option value="sport">Sport</option>
+                    <option value="entertainment">Entertainment</option>
+                </select>
+
+                <button class="btn" id="btnAdd">Add Task</button>
+
+            </form>
+        </modal>
+
+    </div>
+
+
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
