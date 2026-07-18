@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #609CE1;
 }
 
 .container {
@@ -9,7 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #609CE1;
+
     color: #E1ECF9;
 }
 
@@ -33,22 +34,22 @@ body {
 
 /* Days Section  */
 
-.days {
+.days-container {
     display: flex;
     justify-content: space-between;
 }
 
-.hidd{
+.hidd {
     transform: scale(0);
     transition: 0.4s;
 }
 
-.show{
+.show {
     transform: scale(1);
     transition: 0.4s;
 }
 
-.days button {
+.btn-days {
     color: #E1ECF9;
     padding: 10px 50px;
     margin: 5px;
@@ -59,7 +60,7 @@ body {
     box-shadow: 5px 15px 8px rgba(0, 0, 0, 0.612);
 }
 
-.days button:hover {
+.btn-days:hover {
     cursor: pointer;
     transform: translateY(-10px);
     transition: all 0.4s ease-out;
@@ -96,8 +97,8 @@ body {
     font-style: italic;
 }
 
-#btnNew{
-    margin-top: 75px;
+#btnNew {
+    margin: 75px 0px 100px 0px;
 }
 
 #btnNew:hover {
@@ -106,7 +107,7 @@ body {
     transition: all 0.6s ease-in-out;
 }
 
-#btnBack{
+#btnBack {
     background-color: rgba(193, 3, 3, 0.807);
     margin-left: auto;
     margin-bottom: 25px;
@@ -114,7 +115,7 @@ body {
     margin: -50px 0px 25px auto;
 }
 
-#btnBack:hover{
+#btnBack:hover {
     background-color: #E1ECF9;
     color: rgba(193, 3, 3, 0.807);
     transition: 0.6s;
@@ -124,23 +125,23 @@ body {
 
 
 /* Modal Add Tasks Section  */
-.modal{
+.modal {
     position: fixed;
     inset: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 10;
-    background-color: rgba(0, 0, 0,60%);
+    background-color: rgba(0, 0, 0, 60%);
     transform: scale(0);
     transition: 0.4s;
 }
 
-.modal-show{
+.modal-show {
     transform: scale(1);
 }
 
-.formTask {
+.form-task {
     width: 500px;
     height: 600px;
     display: flex;
@@ -241,18 +242,18 @@ body {
     color: #E1ECF9;
 }
 
-#btnAdd{
+#btnAdd {
     margin: 25px auto;
-    background-color: #002a7f ;
+    background-color: #002a7f;
 }
 
-#btnAdd:hover{
+#btnAdd:hover {
     color: #002a7f;
     background-color: #E1ECF9;
     transition: 0.6s;
 }
 
-#btnExitForm{
+#btnExitForm {
     background-color: red;
     padding: 10px 20px;
     font-size: 26px;
@@ -261,9 +262,10 @@ body {
     margin-right: -25px;
 }
 
-#btnExitForm:hover{
+#btnExitForm:hover {
     background-color: #E1ECF9;
     color: red;
     transition: 0.6s ease-in-out;
 }
+
 /* ================================ */
