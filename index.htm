@@ -19,21 +19,13 @@
 
         <!-- Days Section  -->
 
-        <div class="days-container hidd" id="daysContainer">
-
-            <button class="col-color btn-days" onclick="days('sun')">Sunday</button>
-            <button class="col-color1 btn-days" onclick="days('mon')">Monday</button>
-            <button class="col-color btn-days" onclick="days('tue')">Tuesday</button>
-            <button class="col-color1 btn-days" onclick="days('wen')">Wednesday</button>
-            <button class="col-color btn-days" onclick="days('thu')">Thursday</button>
-            <button class="col-color1 btn-days" onclick="days('fri')">Friday</button>
-            <button class="col-color btn-days" onclick="days('sat')">Saturday</button>
+        <div class="days-container" id="daysContainer">
 
         </div>
 
         <!-- Tasks Table Section  -->
 
-        <div class="tasks" id="tasksContainer">
+        <div class="tasks hidd" id="tasksContainer">
             <button class="btn" id="btnBack" onclick="goBack()">Go Back</button>
 
             <table class="table-task" id="tableTask">
@@ -61,7 +53,7 @@
         <!-- Modal Add Task Section  -->
 
         <modal class="modal " id="modal">
-            <form action="" class="form-task">
+            <form action="" class="form-task" id="taskForm">
 
                 <button type="button" class="btn" id="btnExitForm" onclick="exitForm()">X</button>
 
@@ -85,7 +77,7 @@
                     <input type="time" name="" class="input-time" id="timeEnd" required>
                 </div>
 
-                <select name="categories" id="taskCate" required>
+                <select name="categories" class="task-category" id="taskCate" required>
                     <option value="" disabled selected>Select Categorie</option>
                     <option value="work">Work</option>
                     <option value="study">Study</option>
@@ -93,7 +85,47 @@
                     <option value="entertainment">Entertainment</option>
                 </select>
 
-                <button type="button" class="btn" id="btnAdd">Add Task</button>
+                <button type="submit" class="btn" id="btnAdd">Add Task</button>
+
+            </form>
+        </modal>
+
+
+        <!-- Mpdal Update Section -->
+        <modal class="modal " id="modalUpdate">
+            <form action="" class="form-task">
+
+                <button type="button" class="btn" id="btnExitForm" onclick="exitForm()">X</button>
+
+                <div class="input-task-container">
+                    <input type="text" class="input-task" id="updateTaskTitle" required>
+                    <label for="taskTitle">Enter Task Title:</label>
+                    <span class="underline"></span>
+                </div>
+
+                <div class="input-task-container">
+                    <input type="text" class="input-task" id="updateTaskDesc" required>
+                    <label for="taskDesc">Enter Task Description:</label>
+                    <span class="underline"></span>
+                </div>
+
+                <div class="input-time-container">
+                    <label for="timeStart">Select Time Start:</label>
+                    <input type="time" name="" class="input-time" id="updateTimeStart" required>
+
+                    <label for="timeEnd">Select Time Start:</label>
+                    <input type="time" name="" class="input-time" id="updateTimeEnd" required>
+                </div>
+
+                <select name="categories" class="task-category" id="updateTaskCate" required>
+                    <option value="" disabled selected>Select Categorie</option>
+                    <option value="work">Work</option>
+                    <option value="study">Study</option>
+                    <option value="sport">Sport</option>
+                    <option value="entertainment">Entertainment</option>
+                </select>
+
+                <button type="button" class="btn" id="btnSaveUpdate">Update</button>
 
             </form>
         </modal>

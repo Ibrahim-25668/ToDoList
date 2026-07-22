@@ -35,8 +35,32 @@ body {
 /* Days Section  */
 
 .days-container {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 15%;
+    /* flex-grow: 1; */
+    border: 1px solid black;
+    text-align: center;
+    padding: 20px;
+    margin: 15px;
+    background-color: #133863;
+    color: #E1ECF9;
+    box-shadow: 12px 16px 12px rgba(0, 0, 0, 0.628);
+    font-size: 23px;
+    font-weight: 700;
+    font-family: serif;
+    cursor: pointer;
+}
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow: 12px 24px 12px rgba(0, 0, 0, 0.628);
+    transition: all 0.6s ease-in-out;
 }
 
 .hidd {
@@ -86,15 +110,26 @@ body {
 }
 
 .table-task {
-    width: 100%;
+    width: 85%;
 }
 
 .th-task {
-    padding: 10px 75px;
+    padding: 10px 50px;
     border: 1px white solid;
     font-size: 25px;
     font-weight: 900;
     font-style: italic;
+}
+
+.td-task {
+    padding: 10px 30px;
+    font-size: 23px;
+    font-weight: 600;
+    font-style: normal;
+    background-color: rgba(2, 40, 96, 0.644);
+    text-align: center;
+    text-transform: capitalize;
+    border: 1px solid black;
 }
 
 #btnNew {
@@ -109,15 +144,55 @@ body {
 
 #btnBack {
     background-color: rgba(193, 3, 3, 0.807);
-    margin-left: auto;
-    margin-bottom: 25px;
-    margin-top: -50px;
     margin: -50px 0px 25px auto;
 }
 
 #btnBack:hover {
     background-color: #E1ECF9;
     color: rgba(193, 3, 3, 0.807);
+    transition: 0.6s;
+}
+
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.btnDelete,
+.btnUpdate,
+.btnCompleted {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: rgba(255, 0, 0, 0.73);
+    margin: 10px 0px;
+}
+
+.btnDelete:hover {
+    color: rgba(255, 0, 0, 0.73);
+    background-color: #E1ECF9;
+    transition: 0.6s;
+}
+
+.btnUpdate {
+    background-color: rgba(0, 0, 255, 0.739);
+}
+
+.btnUpdate:hover {
+    color: rgba(0, 0, 255, 0.739);
+    background-color: #E1ECF9;
+    transition: 0.6s;
+}
+
+.btnCompleted {
+    background-color: rgba(0, 128, 0, 0.746);
+}
+
+.btnCompleted:hover {
+    color: rgba(0, 128, 0, 0.746);
+    background-color: #E1ECF9;
     transition: 0.6s;
 }
 
@@ -226,7 +301,7 @@ body {
     font-size: 20px;
 }
 
-#taskCate {
+.task-category {
     width: 350px;
     margin: 25px auto;
     font-size: 22px;
@@ -237,7 +312,7 @@ body {
     color: #E1ECF9;
 }
 
-#taskCate option {
+.task-category option {
     background-color: #091D34;
     color: #E1ECF9;
 }
@@ -266,6 +341,16 @@ body {
     background-color: #E1ECF9;
     color: red;
     transition: 0.6s ease-in-out;
+}
+
+#btnSaveUpdate {
+    background-color: rgba(71, 194, 71, 0.683);
+}
+
+#btnSaveUpdate:hover {
+    color: rgb(0, 182, 0);
+    background-color: #E1ECF9;
+    transition: 0.6s;
 }
 
 /* ================================ */
