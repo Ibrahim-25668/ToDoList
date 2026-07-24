@@ -42,9 +42,29 @@ body {
     flex-wrap: wrap;
 }
 
+#btnNextMonth{
+    position: absolute;
+    right: 200px;
+    bottom: 50%;
+}
+
+#btnBackMonth{
+    position: absolute;
+    left: 200px;
+    bottom: 50%;
+}
+
+#calendarContainer{
+    width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
 .card {
-    width: 15%;
-    /* flex-grow: 1; */
+    width: 100px;
+    flex-grow: 1;
     border: 1px solid black;
     text-align: center;
     padding: 20px;

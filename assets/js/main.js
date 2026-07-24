@@ -252,30 +252,61 @@ taskForm.onsubmit = (required) => {
 }
 
 
-function calendarContainer() {
+let calendarContainer = document.getElementById("calendarContainer")
 
-    let toDayDate = new Date();
+let currentDate = new Date();
 
-    for (let i = 0; i < 30; i++) {
+let btnNextMonth = document.getElementById("btnNextMonth")
+let btnBackMonth = document.getElementById("btnBackMonth")
+
+function calendarContainerFunction() {
+    
+    let tempDate = new Date(currentDate)
+
+    let lastDay = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate()
+
+
+    for (let i = 0; i <= 30; i++) {
         let card = document.createElement("div")
         card.classList.add("card")
 
-        let date = toDayDate.toLocaleDateString()
-        
-        card.textContent = date
-        
-        daysContainer.appendChild(card)
-        
-        // console.log(card.textContent)
-        // console.log(toDayDate.getDate())
-        
-        if (toDayDate.getDate() === 31) {
-            
+        card.textContent = tempDate.toLocaleDateString()
+
+        calendarContainer.appendChild(card)
+
+        if (tempDate.getDate() == lastDay) {
             break;
         }
-        toDayDate.setDate(toDayDate.getDate() + 1)
 
+        tempDate.setDate(tempDate.getDate() + 1)
     }
 
 }
-calendarContainer()
+calendarContainerFunction()
+
+function nextMonth() {
+      calendarContainer.innerHTML = ""
+    btnBackMonth.classList.remove("hidd")
+    currentDate.setMonth(currentDate.getMonth() + 1)
+    currentDate.setDate(1)
+    calendarContainerFunction()
+}
+
+function backMonth() {
+      calendarContainer.innerHTML = ""
+    currentDate.setMonth(currentDate.getMonth() - 1)
+
+    let firstMonth = new Date()
+
+
+    if (currentDate.getMonth() == firstMonth.getMonth() && currentDate.getFullYear() == firstMonth.getFullYear()) {
+        btnBackMonth.classList.add("hidd")
+        calendarContainer.innerHTML = ""
+        currentDate = new Date()
+        calendarContainerFunction()
+        return;
+    }
+
+    currentDate.setDate(1)
+    calendarContainerFunction()
+}
